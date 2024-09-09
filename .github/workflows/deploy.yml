@@ -15,6 +15,7 @@ jobs:
       with:
         managed-session-policies: arn:aws:iam::905418336942:role/testing-github-role
         aws-region: us-east-3
+        audience: sts.amazonaws.com
 
     - name: Open port 22 in the security group
       run: |
