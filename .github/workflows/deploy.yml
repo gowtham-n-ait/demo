@@ -1,3 +1,5 @@
+name: Deploy to EC2
+
 on:
   push:
     branches:
@@ -8,22 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Configure AWS credentials with IAM Role
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-		    inline-session-policy: >-
-			     {
-				      "Version": "2012-10-17",
-				      "Statement": [
-				          {
-						          "Sid": "Statement2",
-						          "Effect": "Allow",
-						          "Action": [
-							        "ec2:*"
-						          ],
-						          "Resource": [
-							            "*"
-						            ]
-					        }
-				      ]
-			    }
+      - name: Checkout the files
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials with IAM Role
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::905418336942:role/test-demo-sample-1
+          role-session-name: GitHub
+          aws-region: ${{ secrets.AWS_REGION }}
