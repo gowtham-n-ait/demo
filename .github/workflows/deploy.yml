@@ -19,4 +19,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd /demo
-          git pull
+          git pull origin main
