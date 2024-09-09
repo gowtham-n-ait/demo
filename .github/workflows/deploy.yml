@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Configure AWS credentials with IAM Role
-      uses: aws-actions/configure-aws-credentials@v2
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         managed-session-policies: arn:aws:iam::905418336942:policy/testing-github
     
