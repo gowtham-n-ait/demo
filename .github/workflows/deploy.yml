@@ -14,8 +14,6 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         managed-session-policies: arn:aws:iam::905418336942:role/testing-github-role
-    
-    - name: Open port 22 in the security group
       run: |
         aws ec2 authorize-security-group-ingress \
           --group-id ${{ secrets.SECURITY_GROUP_ID }} \
