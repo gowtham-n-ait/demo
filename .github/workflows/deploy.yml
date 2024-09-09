@@ -1,5 +1,3 @@
-name: Deploy to EC2
-
 on:
   push:
     branches:
@@ -13,14 +11,19 @@ jobs:
     - name: Configure AWS credentials with IAM Role
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        managed-session-policies: arn:aws:iam::905418336942:role/testing-github-role
-        aws-region: us-east-3
-        audience: sts.amazonaws.com
-
-    - name: Open port 22 in the security group
-      run: |
-        aws ec2 authorize-security-group-ingress \
-          --group-id ${{ secrets.SECURITY_GROUP_ID }} \
-          --protocol tcp \
-          --port 22 \
-          --cidr 0.0.0.0/0
+		    inline-session-policy: >-
+			     {
+				      "Version": "2012-10-17",
+				      "Statement": [
+				          {
+						          "Sid": "Statement2",
+						          "Effect": "Allow",
+						          "Action": [
+							        "ec2:*"
+						          ],
+						          "Resource": [
+							            "*"
+						            ]
+					        }
+				      ]
+			    }
