@@ -42,6 +42,9 @@ jobs:
           script: |
             cd demo
             git pull origin main
+            npm install
+            npm run build
+
       - name: close port 22
         run: |
           aws ec2 revoke-security-group-ingress \
