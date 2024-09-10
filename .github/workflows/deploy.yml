@@ -12,13 +12,14 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v2
-
-      - name: Configure AWS credentials with IAM Role
-        uses: aws-actions/configure-aws-credentials@master
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::905418336942:role/test-demo-sample-1
-          role-session-name: GitHub
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           aws-region: us-east-1
+
       - name: Execute remote SSH commands using password
         uses: appleboy/ssh-action@v0.1.3
         with:
