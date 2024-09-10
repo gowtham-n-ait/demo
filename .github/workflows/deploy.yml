@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v2
-      
+
+      - name: Install zip and unzip
+        run: sudo apt-get install zip unzip -y
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
