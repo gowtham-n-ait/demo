@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           aws-region: us-east-1
       - name: zip the file
-        run: zip github.zip *
+        run: zip github.zip .
       - name: Upload to S3
         run: aws s3 sync github.zip s3://sample-bucket-3231
         
