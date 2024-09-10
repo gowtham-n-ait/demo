@@ -25,6 +25,12 @@ jobs:
       - name: install aws cli
         run: sudo ./aws/install --update
 
+      - name: Show current directory
+        run: pwd
+
+      - name: Show current directory
+        run: ls
+
       - name: Zip the files
         run: sudo zip github.zip .
 
