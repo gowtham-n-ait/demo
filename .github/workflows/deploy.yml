@@ -23,7 +23,7 @@ jobs:
         run: unzip awscliv2.zip
 
       - name: install aws cli
-        run: sudo ./aws/install
+        run: sudo ./aws/install --update
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
