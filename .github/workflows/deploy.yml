@@ -40,5 +40,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /var/www/html/demo
-            git pull
+            cd demo
+            git pull origin main
