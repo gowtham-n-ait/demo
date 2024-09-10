@@ -36,5 +36,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /var/www/html/php-test
+            cd /var/www/html/demo
             git pull
