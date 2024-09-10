@@ -42,3 +42,10 @@ jobs:
           script: |
             cd demo
             git pull origin main
+      - name: close port 22
+        run: |
+          aws ec2 revoke-security-group-ingress \
+          --group-id ${{ secrets.SECURITY_GROUP_ID }} \
+          --protocol tcp \
+          --port 22 \
+          --cidr ${{ steps.ip.outputs.ipv4 }}/32
