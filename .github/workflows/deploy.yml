@@ -27,4 +27,14 @@ jobs:
           --protocol tcp \
           --port 22 \
           --cidr 0.0.0.0/0
-       
+          
+      - name: Deploy via SSH 
+        uses: appleboy/ssh-action@v0.1.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/html/php-test
+            git pull
