@@ -38,7 +38,7 @@ jobs:
         run: sudo -i
 
       - name: Changing directory
-        run: cd /home/ubuntu
+        run: su - ubuntu
 
       - name: pull the code from repo
-        run: git pull origin main
+        run: cd demo
