@@ -23,4 +23,4 @@ jobs:
           aws-region: ap-south-1
           commands: |
             cd /home/ubuntu/demo
-            sudo git pull
+            git pull
