@@ -35,4 +35,4 @@ jobs:
           aws-region: ap-south-1
           commands: |
             sudo -i
-            pwd
+            cd /home/ubuntu/
