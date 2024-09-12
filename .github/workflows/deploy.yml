@@ -52,6 +52,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            ssh -i "prikey.pem" ubuntu@10.0.140.61
-            cd demo
-            git pull origin main
+            ssh -o StrictHostKeyChecking=no -i prikey.pem ubuntu@10.0.140.61 << 'EOF'
+              cd demo
+              git pull origin main
+            EOF
