@@ -26,3 +26,5 @@ jobs:
             sudo -i
             cd /home/ubuntu/demo
             git pull
+            
+          working-directory: /home/ubuntu
