@@ -21,4 +21,5 @@ jobs:
           commands: |
             sudo -i
             cd /home/gowtham/deploy/demo/
+            git status
             git fetch && git pull
