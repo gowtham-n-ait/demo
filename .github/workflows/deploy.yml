@@ -34,8 +34,11 @@ jobs:
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
 
+      - name: Login as root
+        run: sudo -i
+
       - name: Changing directory
-        run: cd /home/ubuntu/demo
+        run: cd /home/ubuntu
 
       - name: pull the code from repo
         run: git pull origin main
