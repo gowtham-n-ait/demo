@@ -22,4 +22,4 @@ jobs:
             sudo -i
             su - gowtham
             cd deploy/demo/
-            git pull
+            git pull origin main
