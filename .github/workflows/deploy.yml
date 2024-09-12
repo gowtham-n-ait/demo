@@ -20,6 +20,5 @@ jobs:
           aws-region: ap-south-1
           commands: |
             sudo -i
-            su - gowtham
-            cd deploy/demo/
+            cd /home/gowtham/deploy/demo/
             git pull origin main
