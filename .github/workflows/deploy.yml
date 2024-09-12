@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout the files
+        uses: actions/checkout@v2
+            
       - name: AWS SSM Send-Command
         uses: peterkimzz/aws-ssm-send-command@master
         id: ssm
