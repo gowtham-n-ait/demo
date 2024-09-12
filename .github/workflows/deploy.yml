@@ -23,6 +23,5 @@ jobs:
           aws-region: ap-south-1
           working-directory: /home/ubuntu
           commands: |
-            sudo -i
             cd /home/ubuntu/demo
-            git pull
+            sudo git pull
