@@ -33,3 +33,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
+
+      - name: Changing directory
+        run: cd /home/ubuntu/demo
+
+      - name: pull the code from repo
+        run: git pull origin main
