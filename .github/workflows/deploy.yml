@@ -25,4 +25,4 @@ jobs:
           commands: |
             sudo -i
             cd demo
-            git pull
+            ls
