@@ -23,4 +23,4 @@ jobs:
             sudo -i
             sudo cd /home/ubuntu/demo
             git checkout main
-            git pull
+            git pull origin main
