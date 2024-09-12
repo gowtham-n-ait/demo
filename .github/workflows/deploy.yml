@@ -19,6 +19,7 @@ jobs:
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
           commands: |
+            pwd
             sudo -i
             cd /home/ubuntu/demo
             git pull
