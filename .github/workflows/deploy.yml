@@ -24,6 +24,5 @@ jobs:
           working-directory: /home/ubuntu
           commands: |
             sudo -i
-            su - ubuntu
-            cd demo
+            cd /home/ubuntu/demo
             git pull
