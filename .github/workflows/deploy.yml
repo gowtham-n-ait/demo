@@ -20,5 +20,5 @@ jobs:
           aws-region: ap-south-1
           commands: |
             sudo -i
-            cd demo
-            git fetch
+            cd /home/ubuntu/demo
+            git pull origin main
