@@ -16,10 +16,11 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-          instance-id: ${{ secrets.INSTANCE_ID }}
+          instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
-          #working-directory: /home/ubuntu/demo
-          commands: |
+          
+          name: su to sudo
+          run: |
             sudo -i
             cd demo
             git pull
