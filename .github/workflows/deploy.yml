@@ -20,6 +20,5 @@ jobs:
           aws-region: ap-south-1
           commands: |
             sudo -i
-            cd /home/gowtham/deploy/demo
-            git status
+            cd demo
             git fetch
