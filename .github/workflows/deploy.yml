@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd sample
+            cd demo
             git pull origin main
