@@ -21,10 +21,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
-          commands: |
-            pwd
-            sudo -i
-            cd /home/ubuntu/demo
-            git pull
-            
           working-directory: /home/ubuntu
+          commands: |
+            sudo -i
+            cd demo
+            git pull
