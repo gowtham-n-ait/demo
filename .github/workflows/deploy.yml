@@ -21,6 +21,5 @@ jobs:
           #working-directory: /home/ubuntu/demo
           commands: |
             sudo -i
-            sudo cd /home/ubuntu/demo
-            git checkout main
-            git pull origin main
+            cd /root/demo
+            git pull
