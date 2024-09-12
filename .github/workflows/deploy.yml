@@ -52,5 +52,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            ssh -i "prikey.pem" ubuntu@10.0.140.61
             cd demo
             git pull origin main
