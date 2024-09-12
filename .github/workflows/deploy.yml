@@ -33,12 +33,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
-
-      - name: Login as root
-        run: sudo -i
-
-      - name: Changing directory
-        run: su - ubuntu
-
-      - name: pull the code from repo
-        run: cd demo
+          commands: |
+            sudo -i
+            pwd
