@@ -36,4 +36,4 @@ jobs:
           commands: |
             sudo -i
             cd /home/ubuntu/demo
-            git pull origin main
+            git pull
