@@ -35,5 +35,3 @@ jobs:
           aws-region: ap-south-1
 
           working-directory: /home/ubuntu/
-          command: ls -al
-          comment: Hello world!
