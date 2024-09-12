@@ -35,5 +35,6 @@ jobs:
           aws-region: ap-south-1
           working-directory: /root
           commands: |
+            mkdir sample
             cd demo
             git pull origin main
