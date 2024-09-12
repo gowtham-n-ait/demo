@@ -12,7 +12,19 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v2
-            
+
+      - name: Install zip and unzip
+        run: sudo apt-get install zip unzip -y
+
+      - name: download aws cli
+        run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+      - name: unzip aws cli
+        run: unzip awscliv2.zip
+
+      - name: install aws cli
+        run: sudo ./aws/install --update
+
       - name: AWS SSM Send-Command
         uses: peterkimzz/aws-ssm-send-command@master
         id: ssm
@@ -22,5 +34,6 @@ jobs:
           instance-ids: ${{ secrets.INSTANCE_ID }}
           aws-region: ap-south-1
           commands: |
+            sudo -i
             cd /home/ubuntu/demo
-            git pull
+            git pull origin main
